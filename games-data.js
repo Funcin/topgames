@@ -8,8 +8,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/DriftDudesTeaser.jpg",
         gameUrl: "https://html5games.com/Game/Drift-Dudes/4379d17e-2ec5-45ff-a76b-74e4c7634ed0",
         playerCount: 2000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/drift-dudes"
+        iframeUrl: "https://play.famobi.com/drift-dudes",
+        isRecommended: true
     },
     {
         id: 2,
@@ -19,8 +19,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/EScooterTeaser.jpg",
         gameUrl: "https://html5games.com/Game/E-Scooter/c493535a-9c66-4d47-a3fa-6239aa0e0d52",
         playerCount: 2000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/e-scooter"
+        iframeUrl: "https://play.famobi.com/e-scooter",
+        isRecommended: true
     },
     {
         id: 3,
@@ -30,8 +30,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TrafficTomTeaser.jpg",
         gameUrl: "https://html5games.com/Game/Traffic-Tom/8bf9689b-ca21-4291-af6a-f85c6bcf92f7",
         playerCount: 2000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/traffic-tom"
+        iframeUrl: "https://play.famobi.com/traffic-tom",
+        isRecommended: true
     },
     {
         id: 4,
@@ -41,8 +41,8 @@ const gamesData = [
         imageUrl: "https://github.com/Funcin/app-images/blob/main/AdventureDriversTeaser%20(1).jpg?raw=true",
         gameUrl: "https://html5games.com/Game/Traffic-Tom/8bf9689b-ca21-4291-af6a-f85c6bcf92f7",
         playerCount: 2000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/adventure-drivers"
+        iframeUrl: "https://play.famobi.com/adventure-drivers",
+        isRecommended: true
     },
     {
         id: 5,
@@ -52,8 +52,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/HighHillsTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/high-hills"
+        iframeUrl: "https://play.famobi.com/high-hills",
+        isRecommended: true
     },
     {
         id: 6,
@@ -63,8 +63,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/RaceRightTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/race-right"
+        iframeUrl: "https://play.famobi.com/race-right",
+        isRecommended: true
     },
     {
         id: 64,
@@ -74,8 +74,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/MotoX3mPoolPartyTeaser.jpg",
         gameUrl: "",
         playerCount: 2800,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/moto-x3m-pool-party"
+        iframeUrl: "https://play.famobi.com/moto-x3m-pool-party",
+        isRecommended: true
     },
     {
         id: 65,
@@ -85,8 +85,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/DragRacingClubTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/drag-racing-club"
+        iframeUrl: "https://play.famobi.com/drag-racing-club",
+        isRecommended: true
     },
     {
         id: 66,
@@ -96,8 +96,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BikerStreetTeaser.jpg",
         gameUrl: "",
         playerCount: 4700,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/biker-street"
+        iframeUrl: "https://play.famobi.com/biker-street",
+        isRecommended: true
     },
     {
         id: 67,
@@ -107,8 +107,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/HighwayRiderExtremeTeaser.jpg",
         gameUrl: "",
         playerCount: 3900,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/highway-rider-extreme"
+        iframeUrl: "https://play.famobi.com/highway-rider-extreme",
+        isRecommended: true
     },
     {
         id: 68,
@@ -118,8 +118,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/MotoFuryTeaser.jpg",
         gameUrl: "",
         playerCount: 3900,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/moto-fury"
+        iframeUrl: "https://play.famobi.com/moto-fury",
+        isRecommended: true
     },
     {
         id: 69,
@@ -129,8 +129,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/DriftCupRacingTeaser.jpg",
         gameUrl: "",
         playerCount: 5500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/drift-cup-racing"
+        iframeUrl: "https://play.famobi.com/drift-cup-racing",
+        isRecommended: true
     },
     {
         id: 70,
@@ -140,8 +140,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/RacingMonsterTrucksTeaser.jpg",
         gameUrl: "",
         playerCount: 5600,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/racing-monster-trucks"
+        iframeUrl: "https://play.famobi.com/racing-monster-trucks",
+        isRecommended: true
     },
     {
         id: 71,
@@ -151,8 +151,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/RacingCarsTeaser.jpg",
         gameUrl: "",
         playerCount: 5900,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/racing-cars"
+        iframeUrl: "https://play.famobi.com/racing-cars",
+        isRecommended: true
     },
     {
         id: 72,
@@ -162,8 +162,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TruckTrialsTeaser.jpg",
         gameUrl: "",
         playerCount: 5500,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/truck-trials"
+        iframeUrl: "https://play.famobi.com/truck-trials",
+        isRecommended: true
     },
     {
         id: 73,
@@ -173,8 +173,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/ThugRacerTeaser.jpg",
         gameUrl: "",
         playerCount: 5300,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/thug-racer"
+        iframeUrl: "https://play.famobi.com/thug-racer",
+        isRecommended: true
     },
     {
         id: 74,
@@ -184,8 +184,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/EndlessTruckTeaser.jpg",
         gameUrl: "",
         playerCount: 6800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/endless-truck"
+        iframeUrl: "https://play.famobi.com/endless-truck",
+        isRecommended: true
     },
     {
         id: 75,
@@ -195,8 +195,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/RivalRushTeaser.jpg",
         gameUrl: "",
         playerCount: 6600,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/rival-rush"
+        iframeUrl: "https://play.famobi.com/rival-rush",
+        isRecommended: true
     },
     {
         id: 76,
@@ -206,8 +206,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/StreetPursuit_Teaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/street-pursuit"
+        iframeUrl: "https://play.famobi.com/street-pursuit",
+        isRecommended: true
     },
     {
         id: 77,
@@ -217,8 +217,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/StreetRaceFuryTeaser.jpg",
         gameUrl: "",
         playerCount: 6500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/streetrace-fury"
+        iframeUrl: "https://play.famobi.com/streetrace-fury",
+        isRecommended: true
     },
     {
         id: 78,
@@ -228,8 +228,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/2CarsTeaser.jpg",
         gameUrl: "",
         playerCount: 6500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/2cars"
+        iframeUrl: "https://play.famobi.com/2cars",
+        isRecommended: true
     },
     {
         id: 79,
@@ -239,8 +239,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/DontCrashTeaser.jpg",
         gameUrl: "",
         playerCount: 6900,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/dont-crash"
+        iframeUrl: "https://play.famobi.com/dont-crash",
+        isRecommended: true
     },
     {
         id: 80,
@@ -250,8 +250,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SpeedManiacTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/speed-maniac"
+        iframeUrl: "https://play.famobi.com/speed-maniac",
+        isRecommended: true
     },
     {
         id: 81,
@@ -261,8 +261,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TurbotasticTeaser.jpg",
         gameUrl: "",
         playerCount: 6100,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/turbotastic"
+        iframeUrl: "https://play.famobi.com/turbotastic",
+        isRecommended: true
     },
     {
         id: 82,
@@ -272,8 +272,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BurninRubber_Teaser.jpg",
         gameUrl: "",
         playerCount: 6500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/burnin-rubber"
+        iframeUrl: "https://play.famobi.com/burnin-rubber",
+        isRecommended: true
     },
     {
         id: 83,
@@ -283,8 +283,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SprintClubNitroTeaser.jpg",
         gameUrl: "",
         playerCount: 6600,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/sprint-club-nitro"
+        iframeUrl: "https://play.famobi.com/sprint-club-nitro",
+        isRecommended: true
     },
     // Girls Games
     {
@@ -295,8 +295,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/FashionBattleTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/fashion-battle"
+        iframeUrl: "https://play.famobi.com/fashion-battle",
+        isRecommended: true
     },
     {
         id: 8,
@@ -306,8 +306,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/LoveTesterNewTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/love-tester"
+        iframeUrl: "https://play.famobi.com/love-tester",
+        isRecommended: true
     },
     {
         id: 9,
@@ -317,8 +317,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SaveThePrincessTeaser.jpg",
         gameUrl: "",
         playerCount: 2500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/save-the-princess"
+        iframeUrl: "https://play.famobi.com/save-the-princess",
+        isRecommended: true
     },
     {
         id: 10,
@@ -328,8 +328,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/PopItDuelTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/pop-it-duel"
+        iframeUrl: "https://play.famobi.com/pop-it-duel",
+        isRecommended: true
     },
     {
         id: 11,
@@ -339,8 +339,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/KawaiiChibiCreator_Teaser.jpg",
         gameUrl: "",
         playerCount: 6600,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/kawaii-chibi-creator"
+        iframeUrl: "https://play.famobi.com/kawaii-chibi-creator",
+        isRecommended: true
     },
     {
         id: 12,
@@ -350,8 +350,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/MyFairytaleDeerTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/my-fairytale-deer"
+        iframeUrl: "https://play.famobi.com/my-fairytale-deer",
+        isRecommended: true
     },
     // Puzzle Games
     {
@@ -362,8 +362,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/EmojiFunTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/emoji-fun"
+        iframeUrl: "https://play.famobi.com/emoji-fun",
+        isRecommended: true
     },
     {
         id: 14,
@@ -373,8 +373,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GoEscapeTeaser.jpg",
         gameUrl: "",
         playerCount: 2000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/go-escape"
+        iframeUrl: "https://play.famobi.com/go-escape",
+        isRecommended: true
     },
     {
         id: 15,
@@ -384,8 +384,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SpotTheCatTeaser.jpg",
         gameUrl: "",
         playerCount: 2500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/spot-the-cat"
+        iframeUrl: "https://play.famobi.com/spot-the-cat",
+        isRecommended: true
     },
     {
         id: 16,
@@ -395,8 +395,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/ColorWaterSort3dTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/color-water-sort-3d"
+        iframeUrl: "https://play.famobi.com/color-water-sort-3d",
+        isRecommended: true
     },
     {
         id: 17,
@@ -406,8 +406,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/ThiefPuzzleTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/thief-puzzle"
+        iframeUrl: "https://play.famobi.com/thief-puzzle",
+        isRecommended: true
     },
     {
         id: 18,
@@ -417,8 +417,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/ParkingJamTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/parking-jam"
+        iframeUrl: "https://play.famobi.com/parking-jam",
+        isRecommended: true
     },
     // Quiz Games
     {
@@ -429,8 +429,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GuessTheirAnswerTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/guess-their-answer"
+        iframeUrl: "https://play.famobi.com/guess-their-answer",
+        isRecommended: true
     },
     {
         id: 20,
@@ -440,8 +440,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/7WordsTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/7-words"
+        iframeUrl: "https://play.famobi.com/7-words",
+        isRecommended: true
     },
     {
         id: 21,
@@ -451,8 +451,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/AnimalQuizChristmasTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/animal-quiz"
+        iframeUrl: "https://play.famobi.com/animal-quiz",
+        isRecommended: true
     },
     {
         id: 22,
@@ -462,8 +462,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/FluffyEggTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/fluffy-egg"
+        iframeUrl: "https://play.famobi.com/fluffy-egg",
+        isRecommended: true
     },
     {
         id: 23,
@@ -473,8 +473,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GeoQuizEuropeTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/geo-quiz-europe"
+        iframeUrl: "https://play.famobi.com/geo-quiz-europe",
+        isRecommended: true
     },
     {
         id: 24,
@@ -484,8 +484,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/QuickQuizTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/quick-quiz"
+        iframeUrl: "https://play.famobi.com/quick-quiz",
+        isRecommended: true
     },
     // Bubble Shooter Games
     {
@@ -496,8 +496,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/OmNomBubblesTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/om-nom-bubbles"
+        iframeUrl: "https://play.famobi.com/om-nom-bubbles",
+        isRecommended: true
     },
     {
         id: 26,
@@ -507,8 +507,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BubbleWoodsTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 4,
-        iframeUrl: "https://play.famobi.com/bubble-woods"
+        iframeUrl: "https://play.famobi.com/bubble-woods",
+        isRecommended: true
     },
     {
         id: 27,
@@ -518,8 +518,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/CandyBubble_Teaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/candy-bubble"
+        iframeUrl: "https://play.famobi.com/candy-bubble",
+        isRecommended: true
     },
     {
         id: 28,
@@ -529,8 +529,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BubbleSpirit_Teaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/bubble-spirit"
+        iframeUrl: "https://play.famobi.com/bubble-spirit",
+        isRecommended: true
     },
     {
         id: 29,
@@ -540,8 +540,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BubblesShooterTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/bubbles-shooter"
+        iframeUrl: "https://play.famobi.com/bubbles-shooter",
+        isRecommended: true
     },
     {
         id: 30,
@@ -551,8 +551,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/OrangeRanchTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/orange-ranch"
+        iframeUrl: "https://play.famobi.com/orange-ranch",
+        isRecommended: true
     },
     // Jump & Run Games
     {
@@ -563,8 +563,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/JungleRunTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/jungle-run"
+        iframeUrl: "https://play.famobi.com/jungle-run",
+        isRecommended: true
     },
     {
         id: 32,
@@ -574,8 +574,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BananaRun_Teaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/banana-run"
+        iframeUrl: "https://play.famobi.com/banana-run",
+        isRecommended: true
     },
     {
         id: 33,
@@ -585,8 +585,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GreedyRabbitTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/greedy-rabbit"
+        iframeUrl: "https://play.famobi.com/greedy-rabbit",
+        isRecommended: true
     },
     {
         id: 34,
@@ -596,8 +596,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/BasketAndBall_Teaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/basket-and-ball"
+        iframeUrl: "https://play.famobi.com/basket-and-ball",
+        isRecommended: true
     },
     {
         id: 35,
@@ -607,8 +607,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/YetiSensationTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/yeti-sensation"
+        iframeUrl: "https://play.famobi.com/yeti-sensation",
+        isRecommended: true
     },
     {
         id: 36,
@@ -618,8 +618,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SnowballWorldTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/snowball-world"
+        iframeUrl: "https://play.famobi.com/snowball-world",
+        isRecommended: true
     },
     // Sport Games
     {
@@ -630,8 +630,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/3dBasketballTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/3d-basketball"
+        iframeUrl: "https://play.famobi.com/3d-basketball",
+        isRecommended: true
     },
     {
         id: 39,
@@ -641,8 +641,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/3dDartsTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/3d-darts"
+        iframeUrl: "https://play.famobi.com/3d-darts",
+        isRecommended: true
     },
     {
         id: 40,
@@ -652,8 +652,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GoalkeeperChampTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/goalkeeper-champ"
+        iframeUrl: "https://play.famobi.com/goalkeeper-champ",
+        isRecommended: true
     },
     {
         id: 41,
@@ -663,8 +663,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/3dAirHockeyTeaser.jpg",
         gameUrl: "",
         playerCount: 6300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/3d-air-hockey"
+        iframeUrl: "https://play.famobi.com/3d-air-hockey",
+        isRecommended: true
     },
     {
         id: 42,
@@ -674,8 +674,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/3dBowlingTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/3d-bowling"
+        iframeUrl: "https://play.famobi.com/3d-bowling",
+        isRecommended: true
     },
     // Arcade Games
     {
@@ -686,8 +686,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TrainMinerTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/train-miner"
+        iframeUrl: "https://play.famobi.com/train-miner",
+        isRecommended: true
     },
     {
         id: 44,
@@ -697,8 +697,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/RiseUpTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/rise-up"
+        iframeUrl: "https://play.famobi.com/rise-up",
+        isRecommended: true
     },
     {
         id: 45,
@@ -708,8 +708,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GiantRushTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/giant-rush"
+        iframeUrl: "https://play.famobi.com/giant-rush",
+        isRecommended: true
     },
     {
         id: 46,
@@ -719,8 +719,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/FruitPartyTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/fruit-party"
+        iframeUrl: "https://play.famobi.com/fruit-party",
+        isRecommended: true
     },
     {
         id: 47,
@@ -730,8 +730,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SpeedMasterTeaser.jpg",
         gameUrl: "",
         playerCount: 2300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/speed-master"
+        iframeUrl: "https://play.famobi.com/speed-master",
+        isRecommended: true
     },
     {
         id: 48,
@@ -741,8 +741,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/AlienAttackTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/alien-attack"
+        iframeUrl: "https://play.famobi.com/alien-attack",
+        isRecommended: true
     },
     // Cards Games
     {
@@ -753,8 +753,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/Crossover21Teaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/crossover-21"
+        iframeUrl: "https://play.famobi.com/crossover-21",
+        isRecommended: true
     },
     {
         id: 50,
@@ -764,8 +764,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/PirateCardsTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/pirate-cards"
+        iframeUrl: "https://play.famobi.com/pirate-cards",
+        isRecommended: true
     },
     {
         id: 51,
@@ -775,8 +775,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/SolitaireLegendTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/solitaire-legend"
+        iframeUrl: "https://play.famobi.com/solitaire-legend",
+        isRecommended: true
     },
     {
         id: 52,
@@ -786,8 +786,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/MafiaPokerTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/mafia-poker"
+        iframeUrl: "https://play.famobi.com/mafia-poker",
+        isRecommended: true
     },
     {
         id: 53,
@@ -797,8 +797,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/MatchingCardHeroesTeaser.jpg",
         gameUrl: "",
         playerCount: 2300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/matching-card-heroes"
+        iframeUrl: "https://play.famobi.com/matching-card-heroes",
+        isRecommended: true
     },
     {
         id: 54,
@@ -808,8 +808,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/KittenMatchTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/kitten-match"
+        iframeUrl: "https://play.famobi.com/kitten-match",
+        isRecommended: true
     },
     // Match 3 Games
     {
@@ -820,8 +820,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/FoodRushTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/food-rush"
+        iframeUrl: "https://play.famobi.com/food-rush",
+        isRecommended: true
     },
     {
         id: 56,
@@ -831,8 +831,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TileJourneyNewTeaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/tile-journey"
+        iframeUrl: "https://play.famobi.com/tile-journey",
+        isRecommended: true
     },
     {
         id: 57,
@@ -842,8 +842,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/DiamondRush2Teaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/diamond-rush-2"
+        iframeUrl: "https://play.famobi.com/diamond-rush-2",
+        isRecommended: true
     },
     {
         id: 58,
@@ -853,8 +853,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/GardenBloomTeaser.jpg",
         gameUrl: "",
         playerCount: 1800,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/garden-bloom"
+        iframeUrl: "https://play.famobi.com/garden-bloom",
+        isRecommended: true
     },
     {
         id: 59,
@@ -864,8 +864,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/ZooBoomTeaser.jpg",
         gameUrl: "",
         playerCount: 2300,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/zoo-boom"
+        iframeUrl: "https://play.famobi.com/zoo-boom",
+        isRecommended: true
     },
     {
         id: 60,
@@ -875,8 +875,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/JewelAquariumTeaser.jpg",
         gameUrl: "",
         playerCount: 3200,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/jewel-aquarium"
+        iframeUrl: "https://play.famobi.com/jewel-aquarium",
+        isRecommended: true
     },
     // Other Games
     {
@@ -887,8 +887,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/8BallBilliardsClassicTeaser.jpg",
         gameUrl: "",
         playerCount: 6000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/8-ball-billiards-classic"
+        iframeUrl: "https://play.famobi.com/8-ball-billiards-classic",
+        isRecommended: true
     },
     {
         id: 62,
@@ -898,8 +898,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TableTennis_WorldTour_Teaser.jpg",
         gameUrl: "",
         playerCount: 3000,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/table-tennis-world-tour"
+        iframeUrl: "https://play.famobi.com/table-tennis-world-tour",
+        isRecommended: true
     },
     {
         id: 63,
@@ -909,8 +909,8 @@ const gamesData = [
         imageUrl: "https://raw.githubusercontent.com/Funcin/app-images/main/TowerCrash3dTeaser.jpg",
         gameUrl: "",
         playerCount: 3500,
-        rating: 5,
-        iframeUrl: "https://play.famobi.com/tower-crash-3d"
+        iframeUrl: "https://play.famobi.com/tower-crash-3d",
+        isRecommended: true
     }
 ];
 

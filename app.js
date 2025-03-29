@@ -23,6 +23,59 @@ const gamesPerPage = 12;
 let currentGames = [];
 let top15Games = new Set();
 
+// 为每个分类随机选择推荐游戏
+function selectRecommendedGames() {
+    // 检查本地存储中的推荐游戏数据
+    const storedRecommendations = localStorage.getItem('recommendedGames');
+    const storedDate = localStorage.getItem('recommendedGamesDate');
+    const today = new Date().toDateString();
+
+    // 如果已有今天的推荐数据，直接使用
+    if (storedRecommendations && storedDate === today) {
+        const recommendedIds = new Set(JSON.parse(storedRecommendations));
+        // 重置所有游戏的推荐状态
+        gamesData.forEach(game => {
+            game.isRecommended = recommendedIds.has(game.id);
+        });
+        return;
+    }
+
+    // 获取所有不同的分类
+    const categories = [...new Set(gamesData.map(game => game.category))];
+    
+    // 存储已推荐的游戏ID
+    const recommendedGameIds = new Set();
+    
+    // 重置所有游戏的推荐状态
+    gamesData.forEach(game => {
+        game.isRecommended = false;
+    });
+
+    // 为每个分类选择3个游戏
+    categories.forEach(category => {
+        const gamesInCategory = gamesData.filter(game => game.category === category);
+        
+        // 随机打乱数组
+        const shuffled = [...gamesInCategory].sort(() => Math.random() - 0.5);
+        
+        // 选择前3个游戏（如果该分类游戏数量不足3个，则全选）
+        const selectedGames = shuffled.slice(0, 3);
+        
+        // 标记这些游戏为推荐
+        selectedGames.forEach(game => {
+            const gameIndex = gamesData.findIndex(g => g.id === game.id);
+            if (gameIndex !== -1) {
+                gamesData[gameIndex].isRecommended = true;
+                recommendedGameIds.add(game.id);
+            }
+        });
+    });
+
+    // 将推荐游戏ID和日期保存到本地存储
+    localStorage.setItem('recommendedGames', JSON.stringify([...recommendedGameIds]));
+    localStorage.setItem('recommendedGamesDate', today);
+}
+
 // 主应用初始化函数
 function initializeApp() {
     if (isInitialized) return;
@@ -32,6 +85,9 @@ function initializeApp() {
         console.error('No valid games data available');
         return;
     }
+
+    // 初始化推荐游戏
+    selectRecommendedGames();
 
     // DOM elements
     const headerSearchInput = document.getElementById('header-search-input');
@@ -110,13 +166,6 @@ function initializeApp() {
         
         pageGames.forEach(game => {
             const card = createGameCard(game);
-            
-            if (top15Games.has(game.id)) {
-                const fireIcon = document.createElement('i');
-                fireIcon.className = 'fas fa-fire fire-icon';
-                card.querySelector('.player-count').appendChild(fireIcon);
-            }
-            
             container.appendChild(card);
         });
         
@@ -307,25 +356,36 @@ function createGameCard(game) {
     const gameInfo = document.createElement('div');
     gameInfo.className = 'game-info';
 
+    const tagsContainer = document.createElement('div');
+    tagsContainer.className = 'tags-container';
+
+    // 添加推荐标签
+    if (game.isRecommended) {
+        const recommendedTag = document.createElement('div');
+        recommendedTag.className = 'recommended-tag';
+        recommendedTag.innerHTML = '<i class="fas fa-award"></i> Editor\'s Choice';
+        tagsContainer.appendChild(recommendedTag);
+    }
+
+    // 添加趋势标签
+    if (game.playerCount > 6000) { // 只有当玩家数量超过6000时才显示趋势标签
+        const trendingTag = document.createElement('div');
+        trendingTag.className = 'trending-tag';
+        trendingTag.innerHTML = '<i class="fas fa-fire"></i> Trending Now';
+        tagsContainer.appendChild(trendingTag);
+    }
+
+    gameInfo.appendChild(tagsContainer);
+
     const title = document.createElement('h3');
     title.className = 'game-title';
     title.textContent = game.name;
-
-    const rating = document.createElement('div');
-    rating.className = 'star-rating';
-    for (let i = 0; i < 5; i++) {
-        const star = document.createElement('i');
-        star.className = i < (game.rating || 3) ? 'fas fa-star' : 'far fa-star';
-        rating.appendChild(star);
-    }
-
     gameInfo.appendChild(title);
-    gameInfo.appendChild(rating);
     card.appendChild(gameInfo);
 
     const playerCount = document.createElement('div');
     playerCount.className = 'player-count';
-    playerCount.textContent = `Players Today: ${formatPlayerCount(game.playerCount || game.players || 0)}`;
+    playerCount.innerHTML = `Players: ${formatPlayerCount(game.playerCount || game.players || 0)} <i class="fas fa-chart-line pulse-icon"></i>`;
     
     card.appendChild(playerCount);
 
@@ -374,29 +434,6 @@ function createGameCard(game) {
             alert('游戏链接未配置');
         }
     });
-
-    // Add structured data
-    const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": game.name,
-        "description": game.description,
-        "genre": game.category,
-        "image": game.imageUrl,
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": game.rating,
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "numberOfPlayers": game.playerCount,
-        "url": game.gameUrl || window.location.href
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
 
     return card;
 }
