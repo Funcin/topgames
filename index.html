@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneGameSpace - Free Online Games Collection | Play Now</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="OneGameSpace offers a vast collection of free online games including racing, puzzle, sports, and more. Play instantly in your browser - no downloads required. Your exclusive personal gaming space.">
+    <meta name="keywords" content="free online games, browser games, racing games, puzzle games, sports games, arcade games, multiplayer games, OneGameSpace, instant play games, no download games">
+    <meta name="author" content="OneGameSpace">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#007AFF">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funcin.github.io/topgames/">
+    <meta property="og:title" content="OneGameSpace - Free Online Games Collection | Play Now">
+    <meta property="og:description" content="OneGameSpace offers a vast collection of free online games including racing, puzzle, sports, and more. Play instantly in your browser - no downloads required.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Funcin/app-images/main/logo.png">
+    <meta property="og:site_name" content="OneGameSpace">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://funcin.github.io/topgames/">
+    <meta property="twitter:title" content="OneGameSpace - Free Online Games Collection | Play Now">
+    <meta property="twitter:description" content="OneGameSpace offers a vast collection of free online games including racing, puzzle, sports, and more. Play instantly in your browser - no downloads required.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Funcin/app-images/main/logo.png">
+    <meta property="twitter:creator" content="@onegamespace">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://funcin.github.io/topgames/">
+    
+    <!-- Existing stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E3VL4PEFY2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E3VL4PEFY2');
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1637076228079589"
+     crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="OneGameSpace Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>OneGameSpace</h1>
+                    <p>Your Exclusive Personal Gaming Space</p>
+                </div>
+            </div>
+            <div class="header-search">
+                <div class="search-container">
+                    <input type="text" id="header-search-input" placeholder="Search games...">
+                    <button id="header-search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="category-filters">
+            <button class="category-button active" data-category="all">All</button>
+            <button class="category-button" data-category="Racing">Racing</button>
+            <button class="category-button" data-category="Girls">Girls</button>
+            <button class="category-button" data-category="Puzzle">Puzzle</button>
+            <button class="category-button" data-category="Quiz">Quiz</button>
+            <button class="category-button" data-category="Bubble Shooter">Bubble Shooter</button>
+            <button class="category-button" data-category="Jump & Run">Jump & Run</button>
+            <button class="category-button" data-category="Sport">Sport</button>
+            <button class="category-button" data-category="Arcade">Arcade</button>
+            <button class="category-button" data-category="Cards">Cards</button>
+            <button class="category-button" data-category="Match 3">Match 3</button>
+            <button class="category-button" data-category="other">Other</button>
+        </div>
+        <div id="games-container" class="game-grid"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <div class="social-icons">
+                    <span>Follow Us:</span>
+                    <a href="https://discord.gg/ShxRybQe" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://x.com/onegamespace" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 游戏弹窗 -->
+    <div id="game-modal" class="game-modal">
+        <div class="game-modal-content">
+            <button class="close-button">
+                <i class="fas fa-times"></i>
+            </button>
+            <iframe id="game-iframe" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="games-data.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // 确保游戏数据加载完成后立即显示
+        window.addEventListener('load', function() {
+            if (typeof gamesData !== 'undefined' && Array.isArray(gamesData)) {
+                initializeApp();
+            }
+        });
+    </script>
+</body>
+</html>
