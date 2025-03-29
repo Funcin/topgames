@@ -1,15 +1,9 @@
-# TopGames robots.txt
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /games/
-Allow: /categories/
-Allow: /images/
-Disallow: /admin/
-Disallow: /private/
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
 
-# Crawl-delay
-Crawl-delay: 1
-
-# Sitemaps
-Sitemap: https://onegamespace.com/sitemap.xml 
+Sitemap: https://onegame.fun/sitemap.xml 

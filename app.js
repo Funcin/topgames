@@ -435,6 +435,46 @@ function createGameCard(game) {
         }
     });
 
+    // 添加结构化数据
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OneGame",
+        "url": "https://onegame.fun",
+        "description": "发现最好玩的在线游戏！包括赛车、益智、运动等多种类型。精选编辑推荐和热门游戏，无需下载即可畅玩。",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://onegame.fun/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    };
+
+    const gameStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": game.name,
+        "description": game.description,
+        "genre": game.category,
+        "image": game.imageUrl,
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingCount": game.playerCount,
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingValue": game.isRecommended ? "5" : "4"
+        }
+    };
+
+    const websiteScript = document.createElement('script');
+    websiteScript.type = 'application/ld+json';
+    websiteScript.text = JSON.stringify(structuredData);
+    document.head.appendChild(websiteScript);
+
+    const gameScript = document.createElement('script');
+    gameScript.type = 'application/ld+json';
+    gameScript.text = JSON.stringify(gameStructuredData);
+    document.head.appendChild(gameScript);
+
     return card;
 }
 
