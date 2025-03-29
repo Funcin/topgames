@@ -1,20 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://funcin.github.io/topgames/</loc>
-        <lastmod>2024-03-27</lastmod>
+        <loc>https://onegamespace.com</loc>
+        <lastmod>2024-03-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
+    
+    <!-- 分类页面 -->
     <url>
-        <loc>https://funcin.github.io/topgames/privacy-policy.html</loc>
-        <lastmod>2024-03-27</lastmod>
+        <loc>https://onegamespace.com/categories/racing</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/girls</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/puzzle</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/quiz</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/bubble-shooter</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/jump-and-run</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/sport</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/arcade</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/cards</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/match-3</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/categories/other</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- 静态页面 -->
+    <url>
+        <loc>https://onegamespace.com/privacy-policy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/terms-of-service</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://onegamespace.com/about</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://funcin.github.io/topgames/terms-of-service.html</loc>
-        <lastmod>2024-03-27</lastmod>
+        <loc>https://onegamespace.com/contact</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
