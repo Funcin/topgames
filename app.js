@@ -214,6 +214,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// 创建加载动画
+function createLoadingOverlay() {
+    const overlay = document.createElement('div');
+    overlay.className = 'loading-overlay';
+    overlay.innerHTML = `
+        <div class="loading-spinner"></div>
+        <div class="loading-text">游戏加载中...</div>
+    `;
+    document.body.appendChild(overlay);
+    return overlay;
+}
+
+// 显示加载动画
+function showLoading() {
+    const overlay = document.querySelector('.loading-overlay') || createLoadingOverlay();
+    overlay.classList.add('visible');
+    document.querySelector('.game-iframe-container')?.classList.add('loading');
+}
+
+// 隐藏加载动画
+function hideLoading() {
+    const overlay = document.querySelector('.loading-overlay');
+    if (overlay) {
+        overlay.classList.remove('visible');
+        document.querySelector('.game-iframe-container')?.classList.remove('loading');
+    }
+}
+
 // 创建游戏卡片
 function createGameCard(game) {
     const card = document.createElement('div');
@@ -227,7 +255,7 @@ function createGameCard(game) {
 
     // 设置默认图片
     function setDefaultImage() {
-        img.src = 'https://raw.githubusercontent.com/Funcin/topgames/main/default-game.png';
+        img.src = 'default-game.png';
         imageContainer.classList.add('default-image');
     }
 
@@ -309,7 +337,37 @@ function createGameCard(game) {
     // 为封面图添加点击事件
     imageContainer.addEventListener('click', () => {
         if (game.iframeUrl) {
-            showGameInModal(game.iframeUrl);
+            const gameContainer = document.createElement('div');
+            gameContainer.className = 'game-container';
+            gameContainer.innerHTML = `
+                <div class="game-header">
+                    <h2>${game.name}</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="game-iframe-container">
+                    <div class="loading-overlay">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-text">游戏加载中...</div>
+                    </div>
+                    <iframe src="${game.iframeUrl}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            `;
+
+            const closeButton = gameContainer.querySelector('.close-button');
+            closeButton.addEventListener('click', () => {
+                gameContainer.remove();
+            });
+
+            document.body.appendChild(gameContainer);
+
+            // 监听iframe加载完成
+            const iframe = gameContainer.querySelector('iframe');
+            iframe.addEventListener('load', () => {
+                const loadingOverlay = gameContainer.querySelector('.loading-overlay');
+                if (loadingOverlay) {
+                    loadingOverlay.style.display = 'none';
+                }
+            });
         } else if (game.gameUrl) {
             window.open(game.gameUrl, '_blank');
         } else {
