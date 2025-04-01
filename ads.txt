@@ -1,0 +1,15 @@
+google.com, pub-1637076228079589, DIRECT, f08c47fec0942fa0
+google.com, pub-1637076228079589, RESELLER, f08c47fec0942fa0
+appnexus.com, 3251, RESELLER
+pubmatic.com, 156872, RESELLER, 5d62403b186f2ace
+pubmatic.com, 158659, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 20736, RESELLER, 0bfd66d529a55807
+sovrn.com, 377094, RESELLER, fafdf38b16bf6b2b
+openx.com, 540796952, RESELLER, 6a698e2ec38604c6
+indexexchange.com, 192703, RESELLER
+rhythmone.com, 4107953657, RESELLER, a670c89d4a324e47
+media.net, 8CU7577J9, RESELLER
+adform.com, 2631, RESELLER
+admatic.com.tr, adm-pub-185350, DIRECT
+taboola.com, 1345451, DIRECT, c228e6794e811952
+spotlight.accuweather.com, 303413, RESELLER 
