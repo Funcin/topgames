@@ -707,7 +707,7 @@ footer {
 .game-modal::after {
     content: 'Loading game...';
     position: absolute;
-    top: calc(50% + 40px);
+    top: calc(50% + 70px);
     left: 50%;
     transform: translateX(-50%);
     color: #FFB800;
