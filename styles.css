@@ -705,7 +705,7 @@ footer {
 }
 
 .game-modal::after {
-    content: '游戏加载中...';
+    content: 'Loading game...';
     position: absolute;
     top: calc(50% + 40px);
     left: 50%;
