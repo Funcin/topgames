@@ -6,7 +6,7 @@ Disallow: /assets/
 Disallow: /*.js$
 Disallow: /*.css$
 
-# 允许Google特定机器人访问JS和CSS
+# Allow Google specific bots to access JS and CSS
 User-agent: Googlebot
 Allow: /*.js$
 Allow: /*.css$
@@ -15,12 +15,12 @@ User-agent: Bingbot
 Allow: /*.js$
 Allow: /*.css$
 
-# 设置图片爬取
+# Image crawling settings
 User-agent: Googlebot-Image
 Allow: /logo.png
 Allow: /default-game.png
 
-# 设置爬取率
+# Crawl rate settings
 User-agent: *
 Crawl-delay: 1
 

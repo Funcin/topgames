@@ -116,7 +116,7 @@
         </div>
     </footer>
 
-    <!-- 游戏弹窗 -->
+    <!-- Game Modal -->
     <div id="game-modal" class="game-modal">
         <div class="game-modal-content">
             <button class="close-button">
@@ -129,7 +129,7 @@
     <script src="games-data.js"></script>
     <script src="app.js"></script>
     <script>
-        // 确保游戏数据加载完成后立即显示
+        // Ensure game data is loaded before display
         window.addEventListener('load', function() {
             if (typeof gamesData !== 'undefined' && Array.isArray(gamesData)) {
                 initializeApp();

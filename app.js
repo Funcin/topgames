@@ -1,4 +1,4 @@
-// 等待 gamesData 加载完成
+// Wait for gamesData to load
 function waitForGamesData(callback, maxAttempts = 10) {
     let attempts = 0;
     
@@ -16,30 +16,30 @@ function waitForGamesData(callback, maxAttempts = 10) {
     checkGamesData();
 }
 
-// 创建花瓣撒落效果
+// Create petal falling effect
 function createPetalEffect() {
     const colors = ['#FFB6C1', '#FFC0CB', '#FF69B4', '#FF1493', '#DB7093', '#FFC0CB'];
     const container = document.querySelector('body');
-    const petalsCount = 60; // 花瓣数量
+    const petalsCount = 60; // Number of petals
     
     for (let i = 0; i < petalsCount; i++) {
         setTimeout(() => {
             const petal = document.createElement('div');
             petal.className = 'petal';
             
-            // 随机花瓣大小
+            // Random petal size
             const size = Math.random() * 15 + 10;
             
-            // 随机位置和样式
+            // Random position and style
             const left = Math.random() * 100;
-            const duration = Math.random() * 3 + 4; // 4-7秒的动画时间
-            const delay = Math.random() * 2; // 0-2秒的延迟
+            const duration = Math.random() * 3 + 4; // 4-7 seconds animation duration
+            const delay = Math.random() * 2; // 0-2 seconds delay
             const rotateX = Math.random() * 360;
             const rotateY = Math.random() * 360;
             const rotateZ = Math.random() * 360;
             const color = colors[Math.floor(Math.random() * colors.length)];
             
-            // 设置花瓣样式 - 使用花瓣形状
+            // Set petal style - using petal shape
             petal.style.width = `${size}px`;
             petal.style.height = `${size}px`;
             petal.style.left = `${left}vw`;
@@ -50,12 +50,12 @@ function createPetalEffect() {
             petal.style.animationDelay = `${delay}s`;
             petal.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
             
-            // 随机设置花瓣形状变化
+            // Random petal shape variation
             if (Math.random() > 0.5) {
                 petal.style.borderRadius = '0 50% 0 50%';
             }
             
-            // 创建内部阴影效果，让花瓣看起来更真实
+            // Create inner shadow effect to make petals look more realistic
             const innerShine = document.createElement('div');
             innerShine.className = 'petal-shine';
             innerShine.style.width = '40%';
@@ -68,63 +68,63 @@ function createPetalEffect() {
             
             petal.appendChild(innerShine);
             
-            // 添加花瓣到页面
+            // Add petal to the page
             container.appendChild(petal);
             
-            // 设置动画完成后移除花瓣
+            // Remove petal after animation completes
             setTimeout(() => {
                 petal.remove();
             }, (duration + delay) * 1000);
-        }, i * 100); // 逐个创建花瓣，产生连续效果
+        }, i * 100); // Create petals one by one for continuous effect
     }
 }
 
-// 全局变量
+// Global variables
 let isInitialized = false;
 let currentPage = 1;
 const gamesPerPage = 12;
 let currentGames = [];
 let top15Games = new Set();
 
-// 为每个分类随机选择推荐游戏
+// Randomly select recommended games for each category
 function selectRecommendedGames() {
-    // 检查本地存储中的推荐游戏数据
+    // Check for recommended games data in local storage
     const storedRecommendations = localStorage.getItem('recommendedGames');
     const storedDate = localStorage.getItem('recommendedGamesDate');
     const today = new Date().toDateString();
 
-    // 如果已有今天的推荐数据，直接使用
+    // If we already have today's recommendation data, use it
     if (storedRecommendations && storedDate === today) {
         const recommendedIds = new Set(JSON.parse(storedRecommendations));
-        // 重置所有游戏的推荐状态
+        // Reset recommendation status for all games
         gamesData.forEach(game => {
             game.isRecommended = recommendedIds.has(game.id);
         });
         return;
     }
 
-    // 获取所有不同的分类
+    // Get all unique categories
     const categories = [...new Set(gamesData.map(game => game.category))];
     
-    // 存储已推荐的游戏ID
+    // Store IDs of recommended games
     const recommendedGameIds = new Set();
     
-    // 重置所有游戏的推荐状态
+    // Reset recommendation status for all games
     gamesData.forEach(game => {
         game.isRecommended = false;
     });
 
-    // 为每个分类选择3个游戏
+    // Select 3 games for each category
     categories.forEach(category => {
         const gamesInCategory = gamesData.filter(game => game.category === category);
         
-        // 随机打乱数组
+        // Shuffle array randomly
         const shuffled = [...gamesInCategory].sort(() => Math.random() - 0.5);
         
-        // 选择前3个游戏（如果该分类游戏数量不足3个，则全选）
+        // Select first 3 games (or all if the category has fewer than 3)
         const selectedGames = shuffled.slice(0, 3);
         
-        // 标记这些游戏为推荐
+        // Mark these games as recommended
         selectedGames.forEach(game => {
             const gameIndex = gamesData.findIndex(g => g.id === game.id);
             if (gameIndex !== -1) {
@@ -134,22 +134,22 @@ function selectRecommendedGames() {
         });
     });
 
-    // 将推荐游戏ID和日期保存到本地存储
+    // Save recommended game IDs and date to local storage
     localStorage.setItem('recommendedGames', JSON.stringify([...recommendedGameIds]));
     localStorage.setItem('recommendedGamesDate', today);
 }
 
-// 主应用初始化函数
+// Main application initialization function
 function initializeApp() {
     if (isInitialized) return;
     
-    // 确保有游戏数据
+    // Ensure game data is available
     if (typeof gamesData === 'undefined' || !Array.isArray(gamesData)) {
         console.error('No valid games data available');
         return;
     }
 
-    // 初始化推荐游戏
+    // Initialize recommended games
     selectRecommendedGames();
 
     // DOM elements
@@ -158,17 +158,17 @@ function initializeApp() {
     const categoryButtons = document.querySelectorAll('.category-button');
     const gamesContainer = document.getElementById('games-container');
 
-    // 创建分页容器
+    // Create pagination container
     const paginationContainer = document.createElement('div');
     paginationContainer.className = 'pagination-container';
     gamesContainer.parentNode.insertBefore(paginationContainer, gamesContainer.nextSibling);
 
-    // 分页渲染函数
+    // Pagination rendering function
     function renderPagination(games) {
         const totalPages = Math.ceil(games.length / gamesPerPage);
         paginationContainer.innerHTML = '';
         
-        // 上一页按钮
+        // Previous page button
         const prevButton = document.createElement('button');
         prevButton.className = 'pagination-button';
         prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
@@ -181,7 +181,7 @@ function initializeApp() {
         });
         paginationContainer.appendChild(prevButton);
 
-        // 页码按钮
+        // Page number buttons
         for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement('button');
             pageButton.className = `pagination-button ${i === currentPage ? 'active' : ''}`;
@@ -193,7 +193,7 @@ function initializeApp() {
             paginationContainer.appendChild(pageButton);
         }
 
-        // 下一页按钮
+        // Next page button
         const nextButton = document.createElement('button');
         nextButton.className = 'pagination-button';
         nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -212,19 +212,19 @@ function initializeApp() {
         const container = document.querySelector('.game-grid');
         container.innerHTML = '';
         
-        // 按玩家数量排序
+        // Sort by player count
         const sortedGames = [...games].sort((a, b) => {
             const countA = parseInt(a.playerCount) || 0;
             const countB = parseInt(b.playerCount) || 0;
             return countB - countA;
         });
         
-        // 计算当前页的游戏
+        // Calculate games for current page
         const startIndex = (currentPage - 1) * gamesPerPage;
         const endIndex = startIndex + gamesPerPage;
         const pageGames = sortedGames.slice(startIndex, endIndex);
         
-        // 获取Top15
+        // Get Top15
         top15Games = new Set(sortedGames.slice(0, 15).map(game => game.id));
         
         pageGames.forEach(game => {
@@ -232,7 +232,7 @@ function initializeApp() {
             container.appendChild(card);
         });
         
-        // 渲染分页
+        // Render pagination
         renderPagination(sortedGames);
     }
 
@@ -249,13 +249,13 @@ function initializeApp() {
                 currentPage = 1;
                 renderGames(searchResults);
             } else {
-                // 清空搜索框时，显示Girls分类游戏而不是所有游戏
+                // When search box is cleared, show Girls category games instead of all games
                 const girlsGames = gamesData.filter(game => game.category.toLowerCase() === 'girls');
                 currentGames = girlsGames;
                 currentPage = 1;
                 renderGames(girlsGames);
                 
-                // 确保Girls按钮显示为active状态
+                // Ensure Girls button shows as active
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
                 const girlsButton = document.querySelector('.category-button[data-category="Girls"]');
                 if (girlsButton) {
@@ -273,13 +273,13 @@ function initializeApp() {
             currentPage = 1;
             renderGames(searchResults);
         } else {
-            // 清空搜索框时，显示Girls分类游戏而不是所有游戏
+            // When search box is cleared, show Girls category games instead of all games
             const girlsGames = gamesData.filter(game => game.category.toLowerCase() === 'girls');
             currentGames = girlsGames;
             currentPage = 1;
             renderGames(girlsGames);
             
-            // 确保Girls按钮显示为active状态
+            // Ensure Girls button shows as active
             categoryButtons.forEach(btn => btn.classList.remove('active'));
             const girlsButton = document.querySelector('.category-button[data-category="Girls"]');
             if (girlsButton) {
@@ -291,14 +291,14 @@ function initializeApp() {
     // Category filtering
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // 移除所有按钮的active类
+            // Remove active class from all buttons
             categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // 添加当前按钮的active类
+            // Add active class to current button
             button.classList.add('active');
 
             const category = button.textContent.toLowerCase();
             
-            // 如果点击的是Girls标签，触发花瓣效果
+            // If Girls tab is clicked, trigger petal effect
             if (category === 'girls') {
                 createPetalEffect();
             }
@@ -317,15 +317,15 @@ function initializeApp() {
         });
     });
 
-    // 设置初始状态 - 默认显示Girls分类
+    // Set initial state - default show Girls category
     const girlsButton = document.querySelector('.category-button[data-category="Girls"]');
     if (girlsButton) {
-        // 默认显示Girls分类的游戏
+        // Default show Girls category games
         const girlsGames = gamesData.filter(game => game.category.toLowerCase() === 'girls');
         currentGames = girlsGames;
         renderGames(girlsGames);
         
-        // 初始化时触发花瓣效果
+        // Trigger petal effect on initialization
         setTimeout(() => {
             createPetalEffect();
         }, 500);
@@ -334,7 +334,7 @@ function initializeApp() {
     isInitialized = true;
 }
 
-// 确保在 DOM 和游戏数据都加载完成后初始化
+// Ensure both DOM and game data are loaded before initialization
 function waitForDependencies() {
     return new Promise((resolve) => {
         function checkDependencies() {
@@ -348,14 +348,14 @@ function waitForDependencies() {
     });
 }
 
-// 初始化应用
+// Initialize application
 document.addEventListener('DOMContentLoaded', () => {
     waitForDependencies().then(() => {
         initializeApp();
     });
 });
 
-// 创建加载动画
+// Create loading animation
 function createLoadingOverlay() {
     const overlay = document.createElement('div');
     overlay.className = 'loading-overlay';
@@ -367,14 +367,14 @@ function createLoadingOverlay() {
     return overlay;
 }
 
-// 显示加载动画
+// Show loading animation
 function showLoading() {
     const overlay = document.querySelector('.loading-overlay') || createLoadingOverlay();
     overlay.classList.add('visible');
     document.querySelector('.game-iframe-container')?.classList.add('loading');
 }
 
-// 隐藏加载动画
+// Hide loading animation
 function hideLoading() {
     const overlay = document.querySelector('.loading-overlay');
     if (overlay) {
@@ -383,7 +383,7 @@ function hideLoading() {
     }
 }
 
-// 创建游戏卡片
+// Create game card
 function createGameCard(game) {
     const card = document.createElement('div');
     card.className = 'game-card';
@@ -394,13 +394,13 @@ function createGameCard(game) {
     const img = document.createElement('img');
     img.alt = game.name;
 
-    // 设置默认图片
+    // Set default image
     function setDefaultImage() {
         img.src = 'default-game.png';
         imageContainer.classList.add('default-image');
     }
 
-    // 检查图片是否可以加载
+    // Check if image can be loaded
     function checkImage(url) {
         return new Promise((resolve) => {
             const testImg = new Image();
@@ -418,19 +418,19 @@ function createGameCard(game) {
 
             timeoutId = setTimeout(() => {
                 resolve(false);
-            }, 2000); // 2秒超时
+            }, 2000); // 2 seconds timeout
 
             testImg.src = url;
         });
     }
 
-    // 设置图片源
+    // Set image source
     const imageUrl = game.imageUrl || game.image;
 
-    // 先设置默认图片
+    // First set default image
     setDefaultImage();
 
-    // 如果有图片URL，检查并尝试加载
+    // If there is an image URL, check and try to load
     if (imageUrl && typeof imageUrl === 'string' && 
         !imageUrl.includes('undefined') && !imageUrl.includes('null')) {
         
@@ -451,7 +451,7 @@ function createGameCard(game) {
     const tagsContainer = document.createElement('div');
     tagsContainer.className = 'tags-container';
 
-    // 添加推荐标签
+    // Add recommended tag
     if (game.isRecommended) {
         const recommendedTag = document.createElement('div');
         recommendedTag.className = 'recommended-tag';
@@ -459,8 +459,8 @@ function createGameCard(game) {
         tagsContainer.appendChild(recommendedTag);
     }
 
-    // 添加趋势标签
-    if (game.playerCount > 6000) { // 只有当玩家数量超过6000时才显示趋势标签
+    // Add trending tag
+    if (game.playerCount > 6000) { // Only show trending tag if player count exceeds 6000
         const trendingTag = document.createElement('div');
         trendingTag.className = 'trending-tag';
         trendingTag.innerHTML = '<i class="fas fa-fire"></i> Trending Now';
@@ -481,15 +481,15 @@ function createGameCard(game) {
     
     card.appendChild(playerCount);
 
-    // 创建悬停浮层
+    // Create hover overlay
     const hoverOverlay = document.createElement('div');
     hoverOverlay.className = 'game-hover-overlay';
     
-    // 浮层中的标签容器
+    // Hover layer tag container
     const overlayTagsContainer = document.createElement('div');
     overlayTagsContainer.className = 'tags-container';
     
-    // 复制标签到浮层
+    // Copy tags to hover layer
     if (game.isRecommended) {
         const overlayRecommendedTag = document.createElement('div');
         overlayRecommendedTag.className = 'recommended-tag';
@@ -506,13 +506,13 @@ function createGameCard(game) {
     
     hoverOverlay.appendChild(overlayTagsContainer);
     
-    // 浮层中的标题
+    // Hover layer title
     const overlayTitle = document.createElement('h3');
     overlayTitle.className = 'game-title';
     overlayTitle.textContent = game.name;
     hoverOverlay.appendChild(overlayTitle);
     
-    // 浮层中的游戏描述
+    // Hover layer game description
     if (game.description) {
         const overlayDescription = document.createElement('div');
         overlayDescription.className = 'game-full-description';
@@ -520,18 +520,18 @@ function createGameCard(game) {
         hoverOverlay.appendChild(overlayDescription);
     }
     
-    // 浮层中的玩家数量
+    // Hover layer player count
     const overlayPlayerCount = document.createElement('div');
     overlayPlayerCount.className = 'player-count';
     overlayPlayerCount.innerHTML = `Players: ${formatPlayerCount(game.playerCount || game.players || 0)} <i class="fas fa-chart-line pulse-icon"></i>`;
     hoverOverlay.appendChild(overlayPlayerCount);
     
-    // 浮层中的"立即玩"按钮
+    // Hover layer "Play Now" button
     const playButton = document.createElement('button');
     playButton.className = 'play-now-button';
     playButton.innerHTML = '<i class="fas fa-play"></i> Play Now';
     playButton.addEventListener('click', (e) => {
-        e.stopPropagation(); // 阻止事件冒泡
+        e.stopPropagation(); // Prevent event bubbling
         if (game.iframeUrl) {
             showGameInModal(game.iframeUrl);
         } else if (game.gameUrl) {
@@ -542,10 +542,10 @@ function createGameCard(game) {
     });
     hoverOverlay.appendChild(playButton);
     
-    // 将浮层添加到卡片
+    // Add hover layer to card
     card.appendChild(hoverOverlay);
 
-    // 为封面图添加点击事件
+    // Add cover image click event
     imageContainer.addEventListener('click', () => {
         if (game.iframeUrl) {
             showGameInModal(game.iframeUrl);
@@ -556,7 +556,7 @@ function createGameCard(game) {
         }
     });
 
-    // 添加结构化数据
+    // Add structured data
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -600,33 +600,33 @@ function createGameCard(game) {
     return card;
 }
 
-// 显示游戏弹窗
+// Show game modal
 function showGameInModal(url) {
     const modal = document.getElementById('game-modal');
     const iframe = document.getElementById('game-iframe');
     const closeButton = modal.querySelector('.close-button');
     
-    // 移除之前可能存在的loaded类
+    // Remove previous possible loaded class
     modal.classList.remove('loaded');
     
-    // 设置 iframe 源
+    // Set iframe source
     iframe.src = url;
     
-    // 显示弹窗
+    // Show modal
     modal.classList.add('active');
     
-    // 尝试调整iframe中内容的位置，红框区域向下居中
+    // Try to adjust iframe content position, red frame area down center
     iframe.onload = function() {
-        // 添加loaded类以隐藏加载动画
+        // Add loaded class to hide loading animation
         modal.classList.add('loaded');
         
         try {
-            // 尝试多次注入样式，确保按钮样式能够应用
+            // Try multiple times to inject styles, ensure button styles can be applied
             function injectStyles() {
                 try {
                     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
                     if (iframeDoc) {
-                        // 创建并注入CSS到iframe中
+                        // Create and inject CSS into iframe
                         const style = iframeDoc.createElement('style');
                         style.textContent = `
                             body > div:first-child {
@@ -635,10 +635,10 @@ function showGameInModal(url) {
                                 justify-content: center !important;
                                 align-items: center !important;
                                 height: 100vh !important;
-                                padding-top: 10vh !important; /* 向下偏移 */
+                                padding-top: 10vh !important; /* Downward offset */
                             }
                             
-                            /* 绿色Play按钮的圆角样式 - 更强的选择器 */
+                            /* Green Play button rounded style - Stronger selector */
                             button, 
                             .play-button,
                             a.play-button,
@@ -677,7 +677,7 @@ function showGameInModal(url) {
                                 box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
                             }
                             
-                            /* 特定匹配 play按钮容器 */
+                            /* Specific play button container matching */
                             div > a[href="#"],
                             div > a:not([href]),
                             div[role="button"],
@@ -690,7 +690,7 @@ function showGameInModal(url) {
                                 overflow: hidden !important;
                             }
                             
-                            /* 覆盖可能的内联样式 */
+                            /* Cover possible inline styles */
                             [style*="border-radius"] {
                                 border-radius: 12px !important;
                                 -webkit-border-radius: 12px !important;
@@ -699,13 +699,13 @@ function showGameInModal(url) {
                         `;
                         iframeDoc.head.appendChild(style);
                         
-                        // 直接查找并修改可能的按钮元素
+                        // Directly find and modify possible button elements
                         const possibleButtons = iframeDoc.querySelectorAll('a, button, div[role="button"], [style*="background"]');
                         possibleButtons.forEach(btn => {
                             const style = window.getComputedStyle(btn);
                             const bgColor = style.backgroundColor;
                             
-                            // 检查是否为绿色按钮
+                            // Check if it's a green button
                             if (bgColor.includes('76, 175, 80') || 
                                 bgColor.includes('67, 160, 71') || 
                                 bgColor === 'green' ||
@@ -717,37 +717,37 @@ function showGameInModal(url) {
                         });
                     }
                 } catch (e) {
-                    console.log("注入样式尝试失败:", e);
+                    console.log("Injecting styles attempt failed:", e);
                 }
             }
             
-            // 立即尝试一次
+            // Immediately try once
             injectStyles();
             
-            // 然后多次尝试，确保样式被应用
+            // Then try multiple times, ensure styles are applied
             setTimeout(injectStyles, 500);
             setTimeout(injectStyles, 1000);
             setTimeout(injectStyles, 2000);
             setTimeout(injectStyles, 3000);
             
         } catch (e) {
-            console.log("无法修改iframe内容:", e);
+            console.log("Cannot modify iframe content:", e);
         }
     };
     
-    // 添加关闭按钮事件
+    // Add close button event
     closeButton.onclick = () => {
         modal.classList.remove('active');
         modal.classList.remove('loaded');
-        iframe.src = ''; // 清空 iframe 源
+        iframe.src = ''; // Clear iframe source
     };
     
-    // 点击弹窗外部关闭
+    // Click outside modal to close
     modal.onclick = (e) => {
         if (e.target === modal) {
             modal.classList.remove('active');
             modal.classList.remove('loaded');
-            iframe.src = ''; // 清空 iframe 源
+            iframe.src = ''; // Clear iframe source
         }
     };
 } 

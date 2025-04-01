@@ -1233,24 +1233,24 @@ const gamesData = [
     }
 ];
 
-// 导出游戏数据
+// Export games data
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = gamesData;
 }
 
-// 获取所有游戏分类
+// Get all game categories
 const getCategories = () => {
     const categories = new Set(gamesData.map(game => game.category));
     return ['all', ...Array.from(categories)];
 };
 
-// 按分类过滤游戏
+// Filter games by category
 const filterGamesByCategory = (category) => {
     if (category === 'all') return gamesData;
     return gamesData.filter(game => game.category === category);
 };
 
-// 搜索游戏
+// Search games
 const searchGames = (query) => {
     query = query.toLowerCase();
     return gamesData.filter(game => 
@@ -1260,7 +1260,7 @@ const searchGames = (query) => {
     );
 };
 
-// 验证图片URL
+// Validate image URL
 const validateImageUrl = async (url) => {
     try {
         const response = await fetch(url, { method: 'HEAD' });
@@ -1270,15 +1270,15 @@ const validateImageUrl = async (url) => {
     }
 };
 
-// 获取游戏图片URL
+// Get game image URL
 const getGameImageUrl = (game) => {
     if (!game.image || !validateImageUrl(game.image)) {
-        return 'logo.svg'; // 使用本地默认图片
+        return 'logo.svg'; // Use local default image
     }
     return game.image;
 };
 
-// 格式化日期
+// Format date
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -1288,7 +1288,7 @@ const formatDate = (dateString) => {
     });
 };
 
-// 格式化玩家数量
+// Format player count
 const formatPlayerCount = (count) => {
     if (count >= 1000000) {
         return (count / 1000000).toFixed(1) + 'M';
@@ -1298,7 +1298,7 @@ const formatPlayerCount = (count) => {
     return count.toString();
 };
 
-// 获取搜索建议
+// Get search suggestions
 const getSearchSuggestions = (query) => {
     if (!query) return [];
     const lowercaseQuery = query.toLowerCase();

@@ -142,7 +142,7 @@ header .container {
     white-space: nowrap;
 }
 
-/* 女孩标签特殊样式 */
+/* Girls tab special style */
 .girl-tab {
     background: linear-gradient(135deg, #FF9FF3, #FEC7F8);
     color: #FD3D95;
@@ -210,7 +210,7 @@ header .container {
 
 .game-image {
     width: 100%;
-    padding-top: 100%; /* 修改为1:1比例 */
+    padding-top: 100%; /* Changed to 1:1 ratio */
     position: relative;
     background: var(--background-color);
     border-radius: 8px;
@@ -313,7 +313,7 @@ header .container {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 2.8em; /* 2行的高度：1.4 * 2 */
+    height: 2.8em; /* 2 lines height: 1.4 * 2 */
 }
 
 .game-image.default {
@@ -357,7 +357,7 @@ header .container {
     flex-wrap: wrap;
 }
 
-/* 推荐标签样式 */
+/* Recommended tag style */
 .recommended-tag {
     display: inline-flex;
     align-items: center;
@@ -375,7 +375,7 @@ header .container {
     animation: glowPulse 2s infinite;
 }
 
-/* 趋势标签样式 */
+/* Trending tag style */
 .trending-tag {
     display: inline-flex;
     align-items: center;
@@ -570,7 +570,7 @@ footer {
     }
 }
 
-/* 分页样式 */
+/* Pagination styles */
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -615,7 +615,7 @@ footer {
     font-size: 12px;
 }
 
-/* 响应式布局调整 */
+/* Responsive layout adjustments */
 @media screen and (max-width: 1080px) {
     .category-filters {
         gap: 8px;
@@ -628,7 +628,7 @@ footer {
     }
 }
 
-/* 游戏弹窗样式 */
+/* Game modal styles */
 .game-modal {
     display: none;
     position: fixed;
@@ -676,7 +676,7 @@ footer {
     align-items: center;
 }
 
-/* 调整iframe中内容的垂直位置 */
+/* Adjust iframe content vertical position */
 .game-modal-content::after {
     content: "";
     position: absolute;
@@ -688,7 +688,7 @@ footer {
     z-index: 1;
 }
 
-/* 游戏加载动画 */
+/* Game loading animation */
 .game-modal::before {
     content: '';
     position: absolute;
@@ -722,7 +722,7 @@ footer {
     display: none;
 }
 
-/* 响应式调整 */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .game-modal-content {
         width: 95%;
@@ -737,7 +737,7 @@ footer {
     }
 }
 
-/* 加载动画样式 */
+/* Loading animation styles */
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -779,7 +779,7 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* 游戏iframe容器样式优化 */
+/* Game iframe container style optimization */
 .game-iframe-container {
     position: relative;
     width: 100%;
@@ -818,16 +818,11 @@ footer {
     text-align: center;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 .game-iframe-container.loading {
     opacity: 0.5;
 }
 
-/* 游戏预览框样式 */
+/* Game preview box styles */
 .game-container {
     position: fixed;
     top: 0;
@@ -1009,7 +1004,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* 响应式调整 */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .game-info-content {
         flex-direction: column;
@@ -1032,7 +1027,7 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* 花瓣效果样式 */
+/* Petal effect styles */
 .petal {
     position: fixed;
     top: -50px;
@@ -1077,7 +1072,7 @@ footer {
     }
 }
 
-/* 游戏卡片悬停浮层 */
+/* Game card hover overlay */
 .game-card {
     position: relative;
 }
@@ -1157,7 +1152,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* 响应式调整 */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .game-hover-overlay {
         padding: 15px;
