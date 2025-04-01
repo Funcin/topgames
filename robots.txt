@@ -24,4 +24,4 @@ Allow: /default-game.png
 User-agent: *
 Crawl-delay: 1
 
-Sitemap: https://onegame.fun/sitemap.xml 
+Sitemap: https://onegamespace.com/sitemap.xml 

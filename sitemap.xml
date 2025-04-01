@@ -7,83 +7,83 @@
         http://www.google.com/schemas/sitemap-image/1.1
         http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
     <url>
-        <loc>https://onegame.fun/</loc>
+        <loc>https://onegamespace.com/</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://onegame.fun/logo.png</image:loc>
+            <image:loc>https://onegamespace.com/logo.png</image:loc>
             <image:title>OneGameSpace Logo</image:title>
         </image:image>
     </url>
     <url>
-        <loc>https://onegame.fun/privacy-policy.html</loc>
+        <loc>https://onegamespace.com/privacy-policy.html</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/terms-of-service.html</loc>
+        <loc>https://onegamespace.com/terms-of-service.html</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Girls</loc>
+        <loc>https://onegamespace.com/?category=Girls</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Racing</loc>
+        <loc>https://onegamespace.com/?category=Racing</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Puzzle</loc>
+        <loc>https://onegamespace.com/?category=Puzzle</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Quiz</loc>
+        <loc>https://onegamespace.com/?category=Quiz</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Bubble+Shooter</loc>
+        <loc>https://onegamespace.com/?category=Bubble+Shooter</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Jump+%26+Run</loc>
+        <loc>https://onegamespace.com/?category=Jump+%26+Run</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Sport</loc>
+        <loc>https://onegamespace.com/?category=Sport</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Arcade</loc>
+        <loc>https://onegamespace.com/?category=Arcade</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Cards</loc>
+        <loc>https://onegamespace.com/?category=Cards</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://onegame.fun/?category=Match+3</loc>
+        <loc>https://onegamespace.com/?category=Match+3</loc>
         <lastmod>2024-04-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
